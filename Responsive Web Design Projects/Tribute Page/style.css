@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    background-color: rgb(228, 141, 80);
+    border: 20px solid chocolate;
+    padding: 60px;
+}
+
+#title{
+    text-align: center;
+}
+
+#image{
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    max-width: 300px; 
+    margin: 20px auto;
+}
+
+#img-caption{
+    text-align: center;
+}
+
+#tribute-info{
+    text-align: justify;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+#tribute-link{
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    font-family: monospace;
+}
