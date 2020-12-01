@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(224, 112, 112);
+    padding: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav{
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+header #header-img{
+    width: 280px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+main{
+    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    border: 2px solid black;
+    width: 95%;
+    max-width: 500px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form label{
+    font-weight: 700;
+    font-size: 26px;
+}
+form input[type=email] {
+    width: 100%;
+    max-width: 300px;
+    padding: 7px;
+    border: 3px solid #dddcdc;
+    border-radius: 6px;
+    outline: none;
+    margin: 20px 0;
+    font-size: 16px;
+}
+form input[type=submit]{
+    background-color: #f1c40f;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    padding: 30px 10px;
+    border: 2px solid black;
+}
+
+#features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#features .box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    
+}
+
+section#features .box:last-of-type {
+    margin-bottom: 0px;
+}
+
+#features .box .icon{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-right: 20px;
+    color: darkorange;
+    border: 2px solid black;
+}
+
+#features .box .box-text{
+    width: 80%;
+    font-size: 18px;
+}
+
+#how-it-works{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column-reverse;
+    }
+}
