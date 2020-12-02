@@ -16,14 +16,19 @@ body{
     background-color: #eeeeee;
 }
 
+body .container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(224, 112, 112);
+    background-color: #eeeeee;
     padding: 20px;
-    border: 2px solid black;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -58,7 +63,6 @@ main{
 }
 
 form{
-    border: 2px solid black;
     width: 95%;
     max-width: 500px;
     padding: 30px;
@@ -94,8 +98,7 @@ form input[type=submit]{
 section{
     width: 100%;
     height: auto;
-    padding: 30px 10px;
-    border: 2px solid black;
+    padding: 40px 10px;
 }
 
 #features{
@@ -122,7 +125,6 @@ section#features .box:last-of-type {
     width: 20%;
     margin-right: 20px;
     color: darkorange;
-    border: 2px solid black;
 }
 
 #features .box .box-text{
@@ -136,13 +138,122 @@ section#features .box:last-of-type {
     align-items: center;
 }
 
+#pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pricing .container {
+    width: 100%;
+    padding: 20px 0;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pricing .card{
+    width: 32%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card h3{
+    background-color: #dddddd;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.card h4{
+    font-size: 25px;
+    margin: 20px;
+}
+
+.card p {
+    width: 150px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.card p.last{
+    width: 200px;
+}
+
+.card button{
+    background-color: #f1c40f;
+    font-size: 22px;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+footer{
+    background-color: #dddddd;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .links{
+    width: 200px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+footer p{
+    color: #616060;
+    font-size: 14px;
+}
 
 
 
 
+
+
+@media (max-width:810px){
+    #pricing .container{
+        flex-direction: column;
+    }
+
+    #pricing .card{
+        width: 310px;
+        margin-bottom: 10px;
+    }
+}
 
 @media (max-width:700px){
     header{
         flex-direction: column-reverse;
+    }
+}
+
+@media (max-width:570px){
+    #video-box{
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+    }
+    #pricing .card{
+        width: 80%;
+        
     }
 }
