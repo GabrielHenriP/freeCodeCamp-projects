@@ -8,6 +8,10 @@ html,body{
     height: 100%;
 }
 
+body{
+    overflow-anchor: none;
+}
+
 html{
     scroll-behavior: smooth;
     
@@ -84,13 +88,13 @@ main{
 
 .apresentation h1{
     font-size: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-shadow: 10px 10px 20px black;
 }
 
 .apresentation h2{
     font-size: 38px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     color: rgb(103, 192, 103);
 }
 
@@ -118,9 +122,11 @@ section#projects{
     margin-bottom: 10px;
 }
 
+
+
 #projects hr{
     height: 5px;
-    background-color: rgb(179, 144, 194);
+    background-color:rgb(57, 44, 70);
     border: 0;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -164,13 +170,84 @@ section#projects{
 }
 
 #projects h2{
-    width: 200px;
+    width: 300px;
     background: linear-gradient(rgb(57, 44, 70), rgb(85, 71, 105));
     border-radius: 6px;
     margin: 0 auto;
     padding: 10px;
     color: rgb(212, 189, 216);
-    font-size: 22px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 10px;
+    transition: transform .5s;
+}
+
+#projects h2.link{
+    width: 200px;
+}
+
+#projects h2#link:hover{
+    transform: scale(1.2);
+    background: linear-gradient(rgb(59, 49, 70), rgb(90, 80, 104));
+}
+
+#contact{
+    background: linear-gradient(rgb(140, 140, 185), rgb(150, 135, 163));
+    height: auto;
+    color: rgb(17, 17, 17);
+}
+
+#contact h1{
+    text-align: center;
+    font-size: 60px;
+    margin: 30px 0;
+    
+}
+
+.redes{
+    margin: 0 auto;
+    width: 95%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes .box{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .5s;
+}
+
+.redes .box:hover{
+    transform: translateY(20px);
+}
+
+.redes .box i{
+    margin-right: 10px;
+    font-size: 30px;
+    color: rgb(17, 17, 17);
+}
+
+.redes .box a{
+    color: rgb(17, 17, 17);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: transparent;
+}
+
+.footer hr{
+    background-color: rgb(25, 77, 77);
+    border: 0;
+    height: 4px;
+}
+
+.footer p{
+    text-align: center;
+    padding: 30px;
 }
