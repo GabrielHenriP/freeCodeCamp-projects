@@ -73,7 +73,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(165, 231, 170);
+    
 }
 
 .apresentation{
@@ -89,7 +89,31 @@ main{
 .apresentation h1{
     font-size: 50px;
     padding-bottom: 40px;
-    text-shadow: 10px 10px 20px black;
+    
+    color: transparent;
+    animation-name: hello;
+    animation-duration: 1s;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hello {
+    0% {
+        transform: translateY(-50px);
+        color: transparent;
+    }
+
+    50% {
+        transform: translateY(-30px);
+        color: rgb(13, 228, 41);
+    }
+
+    100% {
+        transform: translateY(0px);
+        color: rgb(165, 231, 170);
+        text-shadow: 10px 10px 20px rgb(41, 40, 40);
+    }
 }
 
 .apresentation h2{
@@ -108,14 +132,14 @@ section#projects{
     height: auto;
 }
 
-.box{
+#projects .box{
     margin: 30px auto;
     width: 50%;
     max-width: 600px;
     margin-bottom: 50px;
 }
 
-.box h2{
+#projects .box h2{
     color: rgb(212, 189, 216);
     font-size: 35px;
     text-align: center;
@@ -170,7 +194,7 @@ section#projects{
 }
 
 #projects h2{
-    width: 300px;
+    width: 280px;
     background: linear-gradient(rgb(57, 44, 70), rgb(85, 71, 105));
     border-radius: 6px;
     margin: 0 auto;
@@ -239,15 +263,82 @@ section#projects{
 
 .footer {
     background-color: transparent;
+    margin-top: 30px;
 }
 
 .footer hr{
     background-color: rgb(25, 77, 77);
     border: 0;
     height: 4px;
+
 }
 
 .footer p{
     text-align: center;
     padding: 30px;
 }
+
+@media (max-width:913px){
+    .apresentation h1{
+        font-size: 40px;
+    }
+
+    .apresentation h2{
+        font-size: 28px;
+    }
+
+    .apresentation h3{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:640px){
+    nav{
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
+
+    nav .user {
+        margin-bottom: 20px;
+    }
+
+   .project-tile{
+       flex-direction: column;
+   }
+
+   .project-tile a{
+       width: 100%;
+   }
+
+   #contact h1{
+       font-size: 45px;
+   }
+
+   .redes .box i{
+    font-size: 25px;
+   }
+
+   .redes .box a{
+    font-size: 25px;
+   }
+
+   #projects .box{
+       width: 95%;
+   }
+
+   
+}
+
+@media (max-width:520px){
+    #contact h1{
+        font-size: 30px;
+    }
+ 
+    .redes .box i{
+     font-size: 18px;
+    }
+ 
+    .redes .box a{
+     font-size: 18px;
+    }
+ }
