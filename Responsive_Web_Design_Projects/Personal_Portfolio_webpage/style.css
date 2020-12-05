@@ -27,7 +27,7 @@ ul{
 }
 
 section{
-    border: 1px solid black;
+    border: 1px solid rgb(41, 41, 41);
     height: 100vh;
 }
 
@@ -36,12 +36,14 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right,rgb(99, 192, 99), rgb(68, 241, 68));
+    /*background: linear-gradient(to right,rgb(99, 192, 99), rgb(68, 241, 68));*/
+    background: linear-gradient(to right,rgb(63, 58, 68), rgb(89, 80, 95));
     padding: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-flow: row-reverse;
+    z-index: 5;
 }
 
 ul{
@@ -50,6 +52,21 @@ ul{
     justify-content: space-between;
     font-weight: bold;
     font-size: 24px;
+    
+}
+
+ul a{
+    color: rgb(211, 210, 210);
+    width: 100%;
+}
+
+ul li{
+    transition: transform .5s;
+}
+
+ul li:hover{
+    color: rgb(41, 34, 34);
+    transform: scale(1.2);
 }
 
 .user{
@@ -57,6 +74,7 @@ ul{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: rgb(211, 210, 210);
 }
 
 .user i{
@@ -69,7 +87,8 @@ main{
 
 #welcome-section{
     height: 100vh;
-    background: linear-gradient(rgb(26, 25, 25), rgb(87, 85, 85));
+    /*background: linear-gradient(rgb(26, 25, 25), rgb(87, 85, 85));*/
+    background: linear-gradient(rgb(28, 23, 39), rgb(103, 83, 126));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +96,7 @@ main{
 }
 
 .apresentation{
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -89,7 +108,7 @@ main{
 .apresentation h1{
     font-size: 50px;
     padding-bottom: 40px;
-    
+    z-index: 1;
     color: transparent;
     animation-name: hello;
     animation-duration: 1s;
@@ -100,31 +119,83 @@ main{
 
 @keyframes hello {
     0% {
-        transform: translateY(-50px);
+        transform: translateY(-120px);
         color: transparent;
     }
 
     50% {
-        transform: translateY(-30px);
-        color: rgb(13, 228, 41);
+        transform: translateY(-60px);
+        color: rgb(169, 78, 230);
     }
 
     100% {
         transform: translateY(0px);
-        color: rgb(165, 231, 170);
-        text-shadow: 10px 10px 20px rgb(41, 40, 40);
+        color: rgb(206, 180, 219);
+        text-shadow: 5px 5px 10px rgb(41, 40, 40);
     }
 }
 
 .apresentation h2{
     font-size: 38px;
     padding-bottom: 30px;
-    color: rgb(103, 192, 103);
+    color: rgb(144, 206, 182);
+    text-shadow: 4px 4px 8px rgb(41, 40, 40);
+    animation-name: student;
+    animation-duration: 1.5s;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes student {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    75% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .apresentation h3{
     font-size: 26px;
-    color: rgb(74, 197, 74);
+    color: rgb(140, 199, 209);
+    text-shadow: 5px 5px 10px rgb(41, 40, 40);
+    animation-name: descript;
+    animation-duration: 1s;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes descript {
+    0% {
+        transform: translateY(120px);
+        color: transparent;
+    }
+
+    50% {
+        transform: translateY(60px);
+        color: rgb(98, 133, 139);
+    }
+
+    100% {
+        transform: translateY(0px);
+        color: rgb(140, 199, 209);
+        text-shadow: 5px 5px 10px rgb(41, 40, 40);
+    }
 }
 
 section#projects{
@@ -276,6 +347,13 @@ section#projects{
 .footer p{
     text-align: center;
     padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer i{
+    margin-left: 6px;
 }
 
 @media (max-width:913px){
@@ -304,6 +382,7 @@ section#projects{
 
    .project-tile{
        flex-direction: column;
+       padding: 20px 1%;
    }
 
    .project-tile a{
@@ -323,13 +402,46 @@ section#projects{
    }
 
    #projects .box{
-       width: 95%;
+       width: 100%;
    }
 
    
 }
 
 @media (max-width:520px){
+    nav{
+        padding: 7px;
+    }
+    
+    ul{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .user h1{
+        font-size: 22px;
+    }
+
+    .apresentation h1{
+        font-size: 30px;
+    }
+
+    .apresentation h2{
+        font-size: 24px;
+    }
+
+    .apresentation h3{
+        font-size: 18px;
+    }
+
+    #projects h2{
+        font-size: 24px;
+        width: 100%;
+    }
+
     #contact h1{
         font-size: 30px;
     }
@@ -342,3 +454,21 @@ section#projects{
      font-size: 18px;
     }
  }
+
+@media (max-width:400px){
+    .redes{
+        flex-direction: column;
+    }
+
+    .redes .box{
+        margin-bottom: 20px;
+    }
+
+    .redes .box i{
+        font-size: 26px;
+    }
+    
+    .redes .box a{
+        font-size: 26px;
+    }
+}
