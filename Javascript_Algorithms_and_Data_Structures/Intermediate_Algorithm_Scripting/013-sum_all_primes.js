@@ -6,7 +6,32 @@ Rewrite sumPrimes so it returns the sum of all prime numbers that are less than 
 
  // minha solução 
  {
-   
+  function sumPrimes(num) {
+    const arr = [2];
+    let primes = [2];
+    let nextNumber;
+
+    while((nextNumber = arr[arr.length-1]+1) <= num){
+      arr.push(nextNumber)// vetor de numero até num
+    }
+    // iteração no vetor de numeros até num
+    arr.forEach( num2 => {
+     let isPrime = primes.every( num3 => {
+        return num2 % num3 !== 0
+      })
+      if(isPrime){
+        primes.push(num2)
+      }
+    })
+  
+    const sumOfPrimes = primes.reduce((total, num2) => {
+      return total + num2
+    })
+    console.log(primes)
+    return  sumOfPrimes;
+  }
+  
+  sumPrimes(10);
  }
 
 //solução do freecodecamp
